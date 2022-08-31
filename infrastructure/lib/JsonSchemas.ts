@@ -19,7 +19,7 @@ export const CreatePokemonRequestModel = <JsonSchema>{
         },
         gender: <JsonSchema>{
             type: JsonSchemaType.STRING,
-            enum: ["Male","Female"]
+            enum: ["Male","Female","Unknown"]
         },
         type: <JsonSchema>{
             type: JsonSchemaType.ARRAY,

@@ -4,7 +4,7 @@ export const CreatePokemonRequestModel = <JsonSchema>{
     schema: JsonSchemaVersion.DRAFT4,
     title: "CreatePokemonsRequestModel",
     type: JsonSchemaType.OBJECT,
-    required: ["nationalDexNumber", "Name"],
+    required: ["nationalDexNumber", "name"],
     additionalProperties: false,
     properties: {
         nationalDexNumber: <JsonSchema>{

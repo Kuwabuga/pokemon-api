@@ -41,7 +41,6 @@ export const buildPokemonAPIGateway = (
     context: Construct,
     hostedZone: IHostedZone,
     certificate: Certificate,
-    getPokemonsLambda: Function,
     createPokemonsLambda: Function
 ): RestApi => {
     const pokemonAPI = new RestApi(context, `${ENVIRONMENT}-${SERVICE}`, <RestApiProps>{

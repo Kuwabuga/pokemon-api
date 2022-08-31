@@ -24,8 +24,8 @@
     ],
     "baseUrl": "../",
     "paths": {
-      "@infrastructure/*": ["./Infrastructure/*"],
-      "@application/*": ["./Application/*"]
+      "@infrastructure/*": ["./infrastructure/*"],
+      "@application/*": ["./application/*"]
     }
   },
   "exclude": [

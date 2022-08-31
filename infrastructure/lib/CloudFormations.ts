@@ -20,7 +20,7 @@ export class PokemonAPIStack extends Stack {
 
     const createPokemonsLambda = buildCreatePokemonsLambda(this, pokemonsTable);
 
-    const pokemonAPI = buildPokemonAPIGateway(this, route53, certificate, getPokemonsLambda, createPokemonsLambda);
+    const pokemonAPI = buildPokemonAPIGateway(this, route53, certificate, createPokemonsLambda);
 
     if (pokemonAPI.domainName) {
       //const cnameRecord = createCnameRecord(this, route53, pokemonAPI.domainName);

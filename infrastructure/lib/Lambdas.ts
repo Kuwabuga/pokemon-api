@@ -9,7 +9,7 @@ export const buildCreatePokemonsLambda = (context: Construct, pokemonsTable: Tab
         functionName: `${ENVIRONMENT}-${SERVICE}-create-pokemons`,
         runtime: Runtime.PYTHON_3_9,
         architecture: Architecture.X86_64,
-        code: Code.fromAsset(join(__dirname, "../../application/create_pokemons")),
+        code: Code.fromAsset(join(__dirname, "../../application")),
         handler: "create_pokemons.handle_event",
         environment: {
             STAGE: ENVIRONMENT,

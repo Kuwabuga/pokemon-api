@@ -18,6 +18,7 @@ func NewHandler(l *log.Logger, s *Service) *Handler {
 }
 
 func (h *Handler) HandleFind(rw http.ResponseWriter, r *http.Request) {
+	h.l.Println("handle Find")
 	params := mux.Vars(r)
 	dexNo := params["dexNo"]
 	pokemon, err := h.s.FindByDexNumber(dexNo)
@@ -36,4 +37,5 @@ func (h *Handler) HandleFind(rw http.ResponseWriter, r *http.Request) {
 }
 
 func (h *Handler) HandleFindAll(rw http.ResponseWriter, r *http.Request) {
+	h.l.Println("Handle Find All")
 }

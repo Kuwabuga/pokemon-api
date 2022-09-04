@@ -10,7 +10,9 @@ import (
 
 func New(l *log.Logger, db *sql.DB) *mux.Router {
 	r := mux.NewRouter()
-	pokemonRoutes(l, db, r)
 	r.Use(middlewares.Json)
+
+	router := r.PathPrefix("/api").Subrouter()
+	pokemonRoutes(l, db, router)
 	return r
 }
